@@ -36,9 +36,9 @@ class Server{
             })
         })
 
-        this.app.use('/api/users', routesUser)
+        this.app.use('/api/user', routesUser)
     }
-
+    
     midleswares(){
         //parsea el body (.ts -> .JSON)
         this.app.use(express.json())
@@ -49,7 +49,7 @@ class Server{
 
     async dbConnect(){
         try{
-            await db.authenticate();
+            await db.authenticate()
             console.log('Base de datos conectada')
         }catch(err){
             console.log(err);

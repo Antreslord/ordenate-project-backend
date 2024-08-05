@@ -40,7 +40,7 @@ class Server {
                 msg: 'API Workin'
             });
         });
-        this.app.use('/api/users', user_1.default);
+        this.app.use('/api/user', user_1.default);
     }
     midleswares() {
         //parsea el body (.ts -> .JSON)
