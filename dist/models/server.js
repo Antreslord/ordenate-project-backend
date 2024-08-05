@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const user_1 = __importDefault(require("../routes/user"));
+const project_1 = __importDefault(require("../routes/project"));
 const connection_1 = __importDefault(require("../db/connection"));
 //clase server
 class Server {
@@ -41,6 +42,7 @@ class Server {
             });
         });
         this.app.use('/api/user', user_1.default);
+        this.app.use('/api/project', project_1.default);
     }
     midleswares() {
         //parsea el body (.ts -> .JSON)
