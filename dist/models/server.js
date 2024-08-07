@@ -16,6 +16,9 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const user_1 = __importDefault(require("../routes/user"));
 const project_1 = __importDefault(require("../routes/project"));
+const activity_1 = __importDefault(require("../routes/activity"));
+const design_1 = __importDefault(require("../routes/design"));
+const note_1 = __importDefault(require("../routes/note"));
 const connection_1 = __importDefault(require("../db/connection"));
 //clase server
 class Server {
@@ -43,6 +46,9 @@ class Server {
         });
         this.app.use('/api/user', user_1.default);
         this.app.use('/api/project', project_1.default);
+        this.app.use('/api/activity', activity_1.default);
+        this.app.use('/api/design', design_1.default);
+        this.app.use('/api/note', note_1.default);
     }
     midleswares() {
         //parsea el body (.ts -> .JSON)

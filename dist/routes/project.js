@@ -5,4 +5,7 @@ const project_1 = require("../controllers/project");
 const router = (0, express_1.Router)();
 router.get('/', project_1.getProjects);
 router.get('/:id', project_1.getProject);
+router.delete('/:id', project_1.deleteProject);
+router.post('/', project_1.postProject);
+router.put('/:id', project_1.updateProject);
 exports.default = router;
